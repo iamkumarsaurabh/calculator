@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs by Kumar Saurabh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+        <section class="program-container">
+            <h1>Calculator</h1>
+            <div class="calculator-box">
+                <div class="display-container">
+                    <input type="text" id="display" placeholder="0" readonly />
+                </div>
+
+                <div class="buttons-grid">
+                    <button id="acBtn" class="action-btn">AC</button>
+                    <button id="deBtn" class="action-btn">DE</button>
+                    <button id="divBtn" class="operator-btn">/</button>
+                    <button id="mulBtn" class="operator-btn">*</button>
+
+                    <button class="digits">7</button>
+                    <button class="digits">8</button>
+                    <button class="digits">9</button>
+                    <button id="subBtn" class="operator-btn">-</button>
+
+                    <button class="digits">4</button>
+                    <button class="digits">5</button>
+                    <button class="digits">6</button>
+                    <button id="addBtn" class="operator-btn">+</button>
+
+                    <button class="digits">1</button>
+                    <button class="digits">2</button>
+                    <button class="digits">3</button>
+                    <button id="equalBtn" class="equal-btn">=</button> <button class="digits zero-btn">0</button>
+                    <button class="digits">00</button>
+                    <button class="digits">.</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="program-container">
+            <h1>Array Manipulator</h1>
+            <div class="array-box">
+                
+                <div class="input-group">
+                    <label>Current Array:</label>
+                    <input type="text" id="arrayResultBox" placeholder="Array is empty" readonly/>
+                </div>
+
+                <div class="input-group row">
+                    <input type="text" id="arrayAddBox" placeholder="Element to add"/>
+                    <button id="arrayAddBtn" class="success-btn">ADD</button>
+                </div>
+
+                <div class="input-group row">
+                    <input type="text" id="arrayDelBox" placeholder="Element to delete"/>
+                    <button id="arrayDelBtn" class="danger-btn">DEL</button>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="copyright">
+            <div>All rights reserved ©️2025.</div>
+            <div>Made with ❤️ by Kumar Saurabh.</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
