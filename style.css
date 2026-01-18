@@ -1,0 +1,194 @@
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0f7fa; /* Light Blue background */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #2f3640;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* --- COMMON CONTAINER STYLES --- */
+.program-container {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- CALCULATOR STYLES --- */
+.calculator-box {
+    background-color: #2f3640; /* Dark Slate */
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+}
+
+.display-container input {
+    width: 100%;
+    height: 70px;
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 2.5rem;
+    padding-right: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #2f3640;
+    box-shadow: inset 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 15px 0;
+    transition: transform 0.1s, filter 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Button Colors */
+.digits {
+    background-color: #353b48;
+    color: white;
+    box-shadow: 0 4px 0 #1e2229;
+}
+
+.operator-btn {
+    background-color: #e1b12c; /* Yellow/Orange */
+    color: white;
+    box-shadow: 0 4px 0 #c29a26;
+}
+
+.action-btn {
+    background-color: #e74c3c; /* Red */
+    color: white;
+    box-shadow: 0 4px 0 #c0392b;
+}
+
+.equal-btn {
+    grid-row: span 2; /* Makes equal button tall */
+    background-color: #44bd32; /* Green */
+    color: white;
+    height: 100%;
+    box-shadow: 0 4px 0 #369628;
+}
+
+/* --- ARRAY PROGRAM STYLES --- */
+.array-box {
+    background-color: #2f3640;
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group.row {
+    flex-direction: row;
+    gap: 10px;
+}
+
+.array-box label {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+.array-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+.array-box input:read-only {
+    background-color: #3e4652;
+    color: #44bd32; /* Green Text */
+    font-weight: bold;
+}
+
+.success-btn {
+    background-color: #44bd32;
+    color: white;
+    width: 80px;
+    box-shadow: 0 4px 0 #369628;
+}
+
+.danger-btn {
+    background-color: #e74c3c;
+    color: white;
+    width: 80px;
+    box-shadow: 0 4px 0 #c0392b;
+}
+
+/* --- FOOTER --- */
+.copyright {
+    text-align: center;
+    color: #7f8fa6;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+/* --- RESPONSIVE DESIGN (MOBILE) --- */
+@media (max-width: 400px) {
+    .buttons-grid {
+        gap: 8px;
+    }
+    
+    button {
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+
+    .display-container input {
+        font-size: 2rem;
+    }
+}
